@@ -16,12 +16,9 @@ import BackButton from "../buttons/BackButton.js";
 
 export default class InfoState extends State {
 	backButton = {};
-    //displayInfo = "Default Information";
 
-	constructor(displayInfo) {
+	constructor() {
 		super("Info");
-        //this.displayInfo = displayInfo;
-        this.displayInfo = "Info State\nSecond Line\nThird Line";
         this.__text = "";
 	}
 
@@ -67,18 +64,16 @@ export default class InfoState extends State {
 			strokeWeight: 5,
 			fill: this.p5.color(0, 0, 0),
 			hoverFill: this.p5.color(0, 0, 0),
-			//pressedFill: this.p5.color(255, 255, 255),
-			pressedFill: this.p5.color(76, 128, 76),
+			pressedFill: this.p5.color(0, 0, 0),
 			loadingFill: this.p5.color(62, 62, 62),
 			disabledFill: this.p5.color(125, 0, 0),
 		}
 
         let infoText = {
-            text: this.displayInfo,
+            text: "",
             textRatio: 45,
         };
 
-		//this.infoTextBox = new Button(infoTextBoxLayout, infoTextBoxStyle, infoText);
 		this.infoTextBox = new TextBox(infoTextBoxLayout, infoTextBoxStyle, infoText);
 	}
 
@@ -88,7 +83,6 @@ export default class InfoState extends State {
 
     set text(text) {
         this.__text = text;
-        //this.infoTextBox.displayInfo(text);
         this.infoTextBox.displayInfo = text;
     }
 
