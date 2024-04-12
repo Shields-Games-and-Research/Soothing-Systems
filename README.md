@@ -1,6 +1,8 @@
 <h1 align="center">
-	Trauma Informed Yoga
+	Soothing Systems
 </h1>
+
+A meditative game experience meant to focus on breathing and movement.
 
 # Usage
 
